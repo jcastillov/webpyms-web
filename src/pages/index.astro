@@ -1,0 +1,592 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const whatsappUrl = "https://wa.me/18095550199?text=" + encodeURIComponent("¡Hola equipo Webpyms! Quiero agendar un diagnóstico comercial de 15 minutos para evaluar el crecimiento de mi empresa.");
+---
+
+<Layout>
+  <!-- Glows de Ambientación -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-cyan-500/10 via-blue-500/5 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+  <div class="absolute top-[800px] right-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[130px] pointer-events-none -z-10"></div>
+  <div class="absolute top-[2200px] left-0 w-[600px] h-[600px] bg-cyan-600/5 blur-[150px] pointer-events-none -z-10"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#06090F]/85 border-b border-white/[0.08] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#080D1A] rounded-[10px] flex items-center justify-center">
+            <span class="text-sm font-extrabold text-cyan-400">W</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base font-extrabold tracking-tight text-white flex items-center gap-1.5">
+            Webpyms
+          </span>
+          <span class="text-[9px] text-cyan-400 font-semibold uppercase tracking-wider">Growth Agency</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#metodologia" class="hover:text-cyan-400 transition-colors">Metodología</a>
+        <a href="#pilares" class="hover:text-cyan-400 transition-colors">Pilares de Crecimiento</a>
+        <a href="#casos" class="hover:text-cyan-400 transition-colors">Casos de Éxito</a>
+        <a href="#servicios" class="hover:text-cyan-400 transition-colors">Servicios Gestionados</a>
+        <a href="#faq" class="hover:text-cyan-400 transition-colors">Preguntas</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          class="px-4 py-2 rounded-lg text-xs font-bold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all shadow-md shadow-cyan-500/20 active:scale-[0.98] cursor-pointer flex items-center gap-1.5"
+        >
+          <span>Agendar Diagnóstico</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="pt-20 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-300 text-xs font-bold mb-6 shadow-inner">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span>Tu Departamento de Crecimiento Comercial · 100% Gestionado Llave en Mano</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] max-w-4xl mx-auto">
+        Multiplicamos las Ventas de tu Empresa.{" "}
+        <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
+          Sin que Tengas que Aprender Ningún Software.
+        </span>
+      </h1>
+
+      <p class="mt-5 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Unimos <strong>captación publicitaria en Meta, portales web ultrarrápidos, atención comercial inmediata 24/7 en WhatsApp y optimización de catálogo</strong>. Nosotros operamos toda la infraestructura; tu equipo solo se dedica a despachar y cobrar.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-extrabold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer"
+        >
+          <svg class="w-4 h-4 fill-slate-950" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span>Agendar Diagnóstico Gratuito (15 min)</span>
+        </a>
+        <a
+          href="#casos"
+          class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-sm font-bold bg-[#0F1626] hover:bg-[#162138] text-slate-200 border border-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <svg class="w-3.5 h-3.5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span>Ver Empresas que Escalamos</span>
+        </a>
+      </div>
+
+      <!-- Trust signals -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-400">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          Cero software que aprender o configurar
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          Tú siempre tienes la aprobación final
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          Respuestas en menos de 2 segundos garantizadas
+        </span>
+      </div>
+    </section>
+
+    <!-- EL PROBLEMA VS LA SOLUCIÓN WEBPYMS -->
+    <section id="metodologia" class="py-20 border-t border-white/[0.08] bg-[#080D1A]/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Por qué las empresas se estancan</h2>
+          <p class="mt-2 text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            El 60% de tus ventas se pierden antes de que puedas cotizar
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <!-- Lo que pasa hoy (El dolor) -->
+          <div class="p-7 rounded-2xl bg-[#0E1424] border border-rose-500/20 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-4 text-rose-400 font-bold text-sm">
+                <span class="w-6 h-6 rounded-full bg-rose-500/10 flex items-center justify-center text-xs">✕</span>
+                La Agencia Tradicional o el Manejo Manual
+              </div>
+              <ul class="space-y-3.5 text-xs text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-rose-400 mt-0.5 font-bold">✕</span>
+                  <span><strong>Posts bonitos que no venden:</strong> Te cobran $1,000+ USD al mes por diseños de Canva que no generan ni un solo cliente calificado.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-rose-400 mt-0.5 font-bold">✕</span>
+                  <span><strong>Leads que se enfrían:</strong> Un cliente pide precio por WhatsApp o Instagram y tardan 3 horas en responder. El cliente ya le compró a la competencia.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-rose-400 mt-0.5 font-bold">✕</span>
+                  <span><strong>Software abandonado:</strong> Te venden licencias caras de CRM que tus vendedores nunca usan porque son complejas y requieren horas de capacitación.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-rose-500/15 text-xs text-rose-300 font-medium">
+              Resultado: Presupuesto desperdiciado y prospectos perdidos.
+            </div>
+          </div>
+
+          <!-- La Solución Webpyms -->
+          <div class="p-7 rounded-2xl bg-gradient-to-br from-[#0C152B] to-[#0A1A2E] border border-cyan-500/30 flex flex-col justify-between relative shadow-xl shadow-cyan-500/5">
+            <div>
+              <div class="flex items-center gap-2 mb-4 text-cyan-400 font-bold text-sm">
+                <span class="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center text-xs">✓</span>
+                El Sistema Comercial Gestionado de Webpyms
+              </div>
+              <ul class="space-y-3.5 text-xs text-slate-200">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-cyan-400 mt-0.5 font-bold">✓</span>
+                  <span><strong>Captación que llena tu bandeja:</strong> Portales web ultrarrápidos y anuncios de Meta que llevan prospectos listos para comprar directo a tu WhatsApp.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-cyan-400 mt-0.5 font-bold">✓</span>
+                  <span><strong>Respuestas en menos de 2 segundos:</strong> Transcripción fonética de audios ruidosos o con acento local. Atención inmediata 24/7 sin que se te enfríe un lead.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-cyan-400 mt-0.5 font-bold">✓</span>
+                  <span><strong>Nosotros operamos todo:</strong> No tienes que entrar a paneles ni configurar bots. Nuestro equipo se encarga de que la máquina ruede todos los días.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-cyan-500/20 text-xs text-cyan-300 font-bold">
+              Resultado: Más ventas cerradas, cero dolores de cabeza tecnológicos.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOS 4 PILARES DEL SISTEMA WEBPYMS -->
+    <section id="pilares" class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Servicio Integral Llave en Mano</h2>
+        <p class="mt-2 text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Los 4 Motores de Crecimiento que Activamos para tu Empresa
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Pilar 1 -->
+        <div class="p-6 rounded-2xl bg-[#0B101D] border border-white/[0.08] hover:border-cyan-500/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">1. Captación Web & Meta Ads</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Diseñamos portales ultrarrápidos con SEO local en Cloudflare y configuramos formularios instantáneos de Facebook/Instagram Ads que entregan los datos de clientes directamente a tu WhatsApp.
+            </p>
+          </div>
+          <div class="mt-5 text-[11px] font-semibold text-cyan-400">
+            Prospectos diarios en tu bandeja →
+          </div>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="p-6 rounded-2xl bg-[#0B101D] border border-white/[0.08] hover:border-emerald-500/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5 group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">2. Atención Inmediata 24/7</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Transcribimos cualquier nota de voz ruidosa o con modismos locales en 2 segundos. Respondemos dudas frecuentes y cotizaciones al instante mientras tu equipo duerme o atiende en la tienda.
+            </p>
+          </div>
+          <div class="mt-5 text-[11px] font-semibold text-emerald-400">
+            Cero cotizaciones enfriadas →
+          </div>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="p-6 rounded-2xl bg-[#0B101D] border border-white/[0.08] hover:border-blue-500/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-5 group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">3. Optimización de Catálogo</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Para marcas y e-commerce (WooCommerce y Shopify): auditamos fichas de productos, extraemos datos de etiquetas físicas y creamos imágenes de estudio fotográfico fotorrealistas de alta gama.
+            </p>
+          </div>
+          <div class="mt-5 text-[11px] font-semibold text-blue-400">
+            Fichas que venden solas →
+          </div>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="p-6 rounded-2xl bg-[#0B101D] border border-white/[0.08] hover:border-violet-500/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 mb-5 group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">4. Community Manager Semanal</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Preparamos cada semana el calendario de publicaciones para Instagram, Facebook y TikTok con tus productos reales. Nada se publica sin que pulses un botón de aprobación.
+            </p>
+          </div>
+          <div class="mt-5 text-[11px] font-semibold text-violet-400">
+            Presencia profesional activa →
+          </div>
+        </div>
+      </div>
+
+      <!-- CALLOUT: SUPERVISIÓN Y CONTROL HUMANO -->
+      <div class="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0C1628] via-[#0A1220] to-[#070D18] border border-cyan-500/25 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0 mt-1">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white">Tranquilidad Total: Supervisión Humana Permanente</h4>
+            <p class="text-xs text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
+              En Webpyms no usamos bots que inventen precios ni den información errónea. Toda la automatización está respaldada por guardrails estrictos. En cuanto un cliente envía un comprobante de pago o hace una pregunta compleja, se transfiere de inmediato a tu asesor con un resumen previo.
+            </p>
+          </div>
+        </div>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          class="px-5 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all whitespace-nowrap shadow-md shadow-cyan-500/20"
+        >
+          Consultar con un Asesor
+        </a>
+      </div>
+    </section>
+
+    <!-- CASOS REALES DE ÉXITO -->
+    <section id="casos" class="py-20 border-t border-white/[0.08] bg-[#070B14]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-bold mb-3">
+            <span>Resultados Comprobados</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Empresas que ya operan con el Sistema Webpyms
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- BioEva -->
+          <div class="p-7 rounded-2xl bg-[#0B101D] border border-white/10 flex flex-col justify-between relative overflow-hidden">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-lg font-bold text-white">BioEva Wellness</h3>
+                  <p class="text-xs text-slate-400">E-commerce de Suplementos Naturales & Retail</p>
+                </div>
+                <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                  +300% Pedidos
+                </span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                «Antes perdíamos decenas de ventas porque los clientes preguntaban precios fuera de horario y no teníamos a nadie disponible. Webpyms implementó el sistema de atención inmediata 24/7 sincronizado con nuestra tienda WooCommerce y optimizó nuestras fichas con fotos de estudio. Ahora cerramos ventas incluso a las 11:00 PM.»
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Canales: WhatsApp, Instagram, WooCommerce</span>
+              <span class="text-cyan-400 font-semibold">Cliente Activo ✓</span>
+            </div>
+          </div>
+
+          <!-- Toldec -->
+          <div class="p-7 rounded-2xl bg-[#0B101D] border border-white/10 flex flex-col justify-between relative overflow-hidden">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-lg font-bold text-white">Toldec Toldos y Carpas</h3>
+                  <p class="text-xs text-slate-400">Servicios Industriales & Estructuras Comerciales</p>
+                </div>
+                <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+                  Captación Continua
+                </span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                «Necesitábamos cotizaciones de empresas y comercios en Santo Domingo sin depender solo de referidos. Webpyms creó nuestro portal web de alta velocidad y conectó las solicitudes de cotización directo a nuestro WhatsApp. Los clientes reciben respuesta inmediata y los cerramos en la misma llamada.»
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Canales: Portal Web SEO, Google Business, WhatsApp</span>
+              <span class="text-cyan-400 font-semibold">Cliente Activo ✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANES DE SERVICIO GESTIONADO -->
+    <section id="servicios" class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Inversión Transparente</h2>
+        <p class="mt-2 text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Planes Gestionados a la Medida de tu Empresa
+        </p>
+        <p class="mt-3 text-xs sm:text-sm text-slate-400">
+          Sin contratos forzosos. Cancelas cuando quieras si no ves resultados.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <!-- PLAN 1: SERVICIOS Y LOCAL -->
+        <div class="rounded-2xl bg-[#0B101D] border border-white/10 p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-white">Crecimiento Local & Servicios</h3>
+            <p class="text-xs text-slate-400 mt-1 mb-5">Para empresas de servicios, clínicas, contratistas y talleres.</p>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl font-extrabold text-white">US$ 450</span>
+                <span class="text-xs text-slate-400 font-medium">/ mes</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">O RD$ 27,000 / mes</p>
+            </div>
+
+            <div class="space-y-2.5 text-xs text-slate-300 border-t border-white/5 pt-5 mb-8">
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Portal Web ultrarrápido con SEO Local</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Optimización de Google Business Profile</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>WhatsApp comercial con transcripción 24/7</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Entrega directa de prospectos a tu celular</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Reporte ejecutivo mensual de resultados</span>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="w-full py-3 rounded-xl text-xs font-bold bg-[#141C2E] hover:bg-[#1E2942] text-slate-200 border border-white/10 hover:border-white/20 transition-all text-center block"
+          >
+            Seleccionar Plan Servicios
+          </a>
+        </div>
+
+        <!-- PLAN 2: E-COMMERCE & OMNICANAL (DESTACADO) -->
+        <div class="rounded-2xl bg-gradient-to-b from-[#0F1B33] to-[#0A1224] border-2 border-cyan-500/60 p-6 flex flex-col justify-between relative shadow-2xl shadow-cyan-500/15">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+            ⭐ Más Popular · Retail & Marcas
+          </div>
+
+          <div>
+            <h3 class="text-base font-bold text-white mt-1">Comercio & Ventas Omnicanal</h3>
+            <p class="text-xs text-slate-300 mt-1 mb-5">Para tiendas online (WooCommerce/Shopify), marcas y distribuidores.</p>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">US$ 850</span>
+                <span class="text-xs text-slate-400 font-medium">/ mes</span>
+              </div>
+              <p class="text-[11px] text-cyan-400 font-medium mt-1">O RD$ 51,000 / mes</p>
+            </div>
+
+            <div class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-5 mb-8">
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400 font-bold">✓</span>
+                <span><strong>Todo lo del Plan Servicios</strong></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400 font-bold">✓</span>
+                <span>Conexión Omnicanal: WhatsApp + Instagram + Facebook</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400 font-bold">✓</span>
+                <span>Meta Lead Ads: Anuncios con formulario directo</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400 font-bold">✓</span>
+                <span>Optimización mensual de catálogo con fotos de estudio</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400 font-bold">✓</span>
+                <span>Community Manager: Contenido semanal listo para 1 clic</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400 font-bold">✓</span>
+                <span>Avisos de pedidos y carritos abandonados automáticos</span>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="w-full py-3.5 rounded-xl text-xs font-extrabold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all text-center block shadow-lg shadow-cyan-500/25 active:scale-[0.98]"
+          >
+            Comenzar con Plan Omnicanal
+          </a>
+        </div>
+
+        <!-- PLAN 3: PARTNER FULL -->
+        <div class="rounded-2xl bg-[#0B101D] border border-white/10 p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-white">Partner Comercial Full</h3>
+            <p class="text-xs text-slate-400 mt-1 mb-5">Para empresas medianas que buscan tercerizar todo su crecimiento.</p>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl font-extrabold text-white">US$ 1,800</span>
+                <span class="text-xs text-slate-400 font-medium">/ mes</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">O RD$ 108,000 / mes + % sobre ventas</p>
+            </div>
+
+            <div class="space-y-2.5 text-xs text-slate-300 border-t border-white/5 pt-5 mb-8">
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span><strong>Todo lo del Plan Omnicanal</strong></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Red de portales satélite pSEO por zonas geográficas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Gestión continua de pauta publicitaria (Meta + Google)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Monitoreo continuo de tiempos de respuesta (SLA)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-cyan-400">✓</span>
+                <span>Reunión estratégica ejecutiva mensual</span>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="w-full py-3 rounded-xl text-xs font-bold bg-[#141C2E] hover:bg-[#1E2942] text-slate-200 border border-white/10 hover:border-white/20 transition-all text-center block"
+          >
+            Hablar con Dirección Comercial
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section id="faq" class="py-20 border-t border-white/[0.08] bg-[#070B14]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Respuestas Claras</h2>
+          <p class="mt-2 text-2xl font-extrabold text-white">Preguntas Frecuentes</p>
+        </div>
+
+        <div class="space-y-3">
+          <details class="rounded-xl border border-white/[0.08] bg-[#0B101D] overflow-hidden group">
+            <summary class="w-full text-left p-4.5 flex items-center justify-between gap-3 cursor-pointer hover:bg-white/[0.02] text-xs sm:text-sm font-bold text-white list-none">
+              <span>¿Tengo que aprender a usar algún software o CRM?</span>
+              <span class="text-cyan-400 font-bold text-sm">+</span>
+            </summary>
+            <div class="px-4.5 pb-4.5 pt-1 text-xs text-slate-300 leading-relaxed border-t border-white/5">
+              No. Nuestro servicio es 100% gestionado (*Done-For-You*). Nuestro equipo técnico y comercial se encarga de configurar, operar y monitorear toda la plataforma. Tú solo recibes los prospectos ya filtrados en tu teléfono o correo.
+            </div>
+          </details>
+
+          <details class="rounded-xl border border-white/[0.08] bg-[#0B101D] overflow-hidden group">
+            <summary class="w-full text-left p-4.5 flex items-center justify-between gap-3 cursor-pointer hover:bg-white/[0.02] text-xs sm:text-sm font-bold text-white list-none">
+              <span>¿Qué pasa con mi número de WhatsApp actual?</span>
+              <span class="text-cyan-400 font-bold text-sm">+</span>
+            </summary>
+            <div class="px-4.5 pb-4.5 pt-1 text-xs text-slate-300 leading-relaxed border-t border-white/5">
+              Tu WhatsApp sigue funcionando en tu celular normalmente. Puedes responder tú mismo cuando estés libre o dejar que el sistema atienda cuando estés ocupado o fuera de horario, con sincronización total y sin riesgo de bloqueo.
+            </div>
+          </details>
+
+          <details class="rounded-xl border border-white/[0.08] bg-[#0B101D] overflow-hidden group">
+            <summary class="w-full text-left p-4.5 flex items-center justify-between gap-3 cursor-pointer hover:bg-white/[0.02] text-xs sm:text-sm font-bold text-white list-none">
+              <span>¿Cómo apruebo las publicaciones de redes sociales?</span>
+              <span class="text-cyan-400 font-bold text-sm">+</span>
+            </summary>
+            <div class="px-4.5 pb-4.5 pt-1 text-xs text-slate-300 leading-relaxed border-t border-white/5">
+              Cada semana te enviamos un enlace de vista previa con las publicaciones de tus productos reales ya diseñadas con fotos de estudio y textos comerciales. Puedes cambiar cualquier detalle o pulsar "Aprobar" con 1 clic. Nada se publica sin tu autorización.
+            </div>
+          </details>
+
+          <details class="rounded-xl border border-white/[0.08] bg-[#0B101D] overflow-hidden group">
+            <summary class="w-full text-left p-4.5 flex items-center justify-between gap-3 cursor-pointer hover:bg-white/[0.02] text-xs sm:text-sm font-bold text-white list-none">
+              <span>¿Existe algún contrato forzoso o permanencia mínima?</span>
+              <span class="text-cyan-400 font-bold text-sm">+</span>
+            </summary>
+            <div class="px-4.5 pb-4.5 pt-1 text-xs text-slate-300 leading-relaxed border-t border-white/5">
+              No creemos en contratos forzosos. Trabajamos mes a mes: si en cualquier momento decides pausar o cancelar el servicio, puedes hacerlo sin penalidades.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-tr from-cyan-950/60 via-[#0B101D] to-blue-950/40 border border-cyan-500/30 p-8 sm:p-14 text-center relative overflow-hidden shadow-2xl">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight relative z-10">
+          ¿Listo para poner tu captación y ventas en piloto automático?
+        </h2>
+        <p class="mt-3 text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed relative z-10">
+          Evaluemos el potencial comercial de tu empresa en una llamada de 15 minutos. Sin compromisos ni tecnicismos.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 relative z-10">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all shadow-xl shadow-cyan-500/25 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2"
+          >
+            <span>Agendar Diagnóstico Gratuito vía WhatsApp</span>
+            <svg class="w-4 h-4 fill-slate-950" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.08] bg-[#04060A] py-12 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white">Webpyms SRL</span>
+        <span>·</span>
+        <span>Agencia de Crecimiento Comercial & Automatización de Ventas</span>
+      </div>
+      <div>
+        <span>República Dominicana · Estados Unidos · Latinoamérica</span>
+      </div>
+    </div>
+  </footer>
+</Layout>

@@ -1,0 +1,98 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Webpyms · Agencia de Crecimiento Comercial & Automatización de Ventas",
+  description = "Multiplicamos las ventas de tu empresa con captación web, publicidad en Meta, atención 24/7 en WhatsApp y optimización de catálogo. Todo gestionado por nosotros, sin software que aprender."
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://webpyms.com');
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Primario -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Webpyms SRL" />
+    <meta name="theme-color" content="#06090F" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Webpyms" />
+    <meta property="og:locale" content="es_DO" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Tipografía Google: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Datos Estructurados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Webpyms",
+        "url": "https://webpyms.com",
+        "description": "Agencia de Crecimiento Comercial y Automatización de Ventas para empresas en República Dominicana y Latinoamérica.",
+        "areaServed": ["DO", "US", "LATAM"],
+        "serviceType": [
+          "Captación Comercial",
+          "Publicidad Meta Ads y Google Ads",
+          "Automatización de WhatsApp y Redes Sociales",
+          "Desarrollo de Portales Web de Alta Conversión",
+          "Optimización de Catálogo y E-commerce"
+        ],
+        "knowsAbout": [
+          "Marketing Digital de Resultados",
+          "Atención Comercial 24/7",
+          "SEO Programático",
+          "Integración de Tiendas Online"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-[#06090F] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500/30 selection:text-cyan-300 antialiased relative overflow-x-hidden">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #06090F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #182236;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #06B6D4;
+  }
+</style>
